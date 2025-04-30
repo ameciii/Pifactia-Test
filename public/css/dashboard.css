@@ -1,0 +1,358 @@
+/* Global */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* gray-100 */
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #4f46e5; /* indigo-600 */
+    color: white;
+    width: 240px;
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background-color: #4338ca; /* indigo-700 */
+}
+
+/* Topbar */
+.topbar {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    border-radius: 0.75rem;
+}
+
+.topbar h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.topbar .profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.topbar .profile span {
+    font-weight: 500;
+}
+
+/* Content */
+.content {
+    padding: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    /* width: 100%; Tambahkan ini */
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280; /* gray-500 */
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.card small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #10b981; /* green-500 */
+    font-size: 0.8rem;
+}
+
+/* Recent Activity */
+.activity {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.activity h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f9fafb; /* gray-50 */
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f3f4f6; /* gray-100 */
+}
+
+tbody tr:hover {
+    background-color: #e5e7eb; /* gray-200 */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .topbar {
+        justify-content: center;
+    }
+}
+
+.flex-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #4f46e5;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 🛠️ Tambahkan ini */
+    position: fixed; /* 🛠️ Tambahkan ini */
+    left: 0;
+    top: 0;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background-color: #4338ca;
+}
+
+.main-content {
+    margin-left: 260px; /* 🛠️ Biar ada jarak cukup dari sidebar */
+    padding: 2rem;      /* 🛠️ Biar isi dalamnya gak nempel ke pinggir */
+    flex-grow: 1;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-dashboard {
+    margin-left: 260px; /* Biar sejajar sama main content */
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.profile-icon {
+    background-color: #e5e7eb;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-icon svg {
+    width: 20px;
+    height: 20px;
+    color: #4b5563; /* gray-600 */
+}
+
+.logout-section {
+    margin-top: 2rem; /* ✨ Ganti dari auto jadi jarak biasa */
+    padding-top: 2rem; /* ✨ Kasih ruang nafas dari menu terakhir */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* ✨ Biar lebih manis */
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #4338ca;
+}
+
+.logout-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #4f46e5;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+.btn-edit {
+    color: #4f46e5;
+    font-weight: 500;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.btn-edit:hover {
+    text-decoration: underline;
+}
+
+.btn-delete {
+    color: #dc2626;
+    font-weight: 500;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    text-decoration: underline;
+}
+
+/* Table */
+.table-header {
+    background-color: #f9fafb;
+}
+
+.table-header th {
+    padding: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.table-row td {
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    /* margin-top: 1rem; */
+    /* margin-right: 0px; */
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
